@@ -1,7 +1,6 @@
 package service
 
 import (
-	"context"
 	"fmt"
 	"github.com/Waelson/internal/dao"
 	"github.com/Waelson/internal/repository"
@@ -9,7 +8,7 @@ import (
 )
 
 type CotacaoService interface {
-	Obter(ctx context.Context) (string, error)
+	Obter() (string, error)
 }
 
 type cotacaoService struct {
@@ -17,7 +16,7 @@ type cotacaoService struct {
 	cotacaoDao        dao.CotacaoDao
 }
 
-func (c *cotacaoService) Obter(ctx context.Context) (string, error) {
+func (c *cotacaoService) Obter() (string, error) {
 
 	fmt.Println("Obtendo a cotacao da API")
 

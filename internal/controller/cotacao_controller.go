@@ -1,7 +1,6 @@
 package controller
 
 import (
-	"context"
 	"fmt"
 	"net/http"
 
@@ -17,7 +16,7 @@ type cotacaoController struct {
 }
 
 func (c *cotacaoController) Handle(w http.ResponseWriter, r *http.Request) {
-	cotacao, err := c.cotacaoService.Obter(context.Background())
+	cotacao, err := c.cotacaoService.Obter()
 	if err != nil {
 		fmt.Println("ocorreu um erro no processamento da requisicao", err)
 		fmt.Fprintf(w, "Erro ao processar a requisicao")
