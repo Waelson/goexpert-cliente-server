@@ -1,0 +1,2 @@
+[07/09/2023 15:56:00] Erro ao processar a requisicao
+[07/09/2023 15:56:08] Erro ao processar a requisicao

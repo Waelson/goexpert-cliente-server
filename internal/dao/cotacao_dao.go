@@ -27,7 +27,7 @@ func (e *cotacaoDao) Obter() (*resource.CotacaoResponse, error) {
 		return nil, err
 	}
 
-	ctx, cancel := context.WithTimeout(context.Background(), 200*time.Millisecond)
+	ctx, cancel := context.WithTimeout(context.Background(), e.contextTimeout)
 	defer cancel()
 
 	// Associe o contexto à solicitação
